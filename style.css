@@ -1,0 +1,154 @@
+/* Import web fonts: Merriweather and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --base-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #ffc06e;
+    --secondary-color: #474da1;
+    --color-1:#f7f3de;
+    --color-2:#F3F7F9;
+    --color-3:#F6F3F9;
+}
+
+/* Root variables above define color palette used across the site */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset for consistent spacing and box-sizing */
+
+html{
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+/* Base font and text color */
+
+body{
+    background-color: var(--base-color);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Page background and readable defaults */
+
+h1, h2, h3 {
+    font-family: merriweather, poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading fonts: prefer Merriweather, fallback to Poppins */
+
+nav{
+    margin:1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+/* Navigation container centers and constrains width */
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2em;
+}
+
+/* Target the first list item to push remaining items to the right */
+nav ul li:first-child{
+    margin-right: auto;
+}
+
+/* Style the first link (usually the site title) separately */
+nav ul li:first-child a{
+    font-family: 'Merriweather', 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+header, section{
+    margin: 2em auto;
+    width: min(70em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+/* Header and section share layout and background; fixed border-radius syntax */
+
+/* Flex container used for image + text rows */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.header-img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* Image styles: corrected class name from .hearder-img to .header-img */
+
+.text-container {
+    flex: 0 1 34em;
+    padding-bottom: 300px;
+}
+
+/* Text container controls how wide the text column can grow/shrink */
+
+h1 {
+    margin: 7.5em 0 1em 0;
+    font-size: 2.5rem;
+}
+
+/* Hero heading spacing and size */
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 600;
+}
+
+/* Call-to-action buttons: fixed typo 'inline-bloc' -> 'inline-block' */
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+/* Modifier class for secondary buttons/objects */
+
+section {
+    padding: 3em min(15%, 2em);
+    background-color: var(--color-2);
+    text-align: center;
+} 
+
+h2 {
+    margin-bottom: 1em;
+    font-size: 2rem;
+}
+
+section p {
+    max-width: 40em;
+    margin-top: 1em;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
